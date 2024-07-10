@@ -1,11 +1,9 @@
 import 'package:bloc_study/6%EA%B0%95/bloc/movie_bloc_controller.dart';
-import 'package:bloc_study/6%EA%B0%95/cubit/movie_cubit_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class App extends StatelessWidget {
-  const App({super.key});
+class App6 extends StatelessWidget {
+  const App6({super.key});
 
   @override
   Widget build(BuildContext context) {

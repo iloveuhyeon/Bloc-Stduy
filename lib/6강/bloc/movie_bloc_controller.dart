@@ -13,7 +13,7 @@ class MovieBlocController extends Bloc<MovieEvent, List<String>> {
         emit(result);
       },
       transformer: (events, mapper) => events
-          .debounceTime(const Duration(milliseconds: 500))
+          .debounceTime(const Duration(milliseconds: 700))
           .flatMap(mapper),
     );
   }

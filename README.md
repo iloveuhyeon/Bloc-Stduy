@@ -179,5 +179,19 @@ ex)
 BlocBuilder와 BlocListener를 합쳐놓은 위젯.
 - 이벤트도 처리하면서 동시에 화면도 변경을 해줘야 할때 사용
 - buildWhen과 listenWhen조건을 통해 적절한 때에만 변경 및 이벤트처리를 할 수 있다.
+# Bloc에만 있는 기능
+상태변화 모니터링을 이벤트로 확인 가능 하다 
 
-# Bloc-Stduy
+# Bloc_Concurrency란?
+Ember_concurrency에서 영감을 받음.
+<br>
+그럼 여기서 Ember_concurrency란? 
+- EmberJS의 플러그인으로 비동기 프로그램을 간결하면서도 강력하게만들어주는 라이브러리다.
+    - 그럼 여기서 EmberJS란? 
+        - React나 Vue, Angular같은 프레임워크이다. 
+
+웹에서만 사용하던 emberjs같은 기술을 플러터 bloc에서도 사용할 수 있게 하는 라이브러리이다.
+
+그래서 bloc_concurrency또한 비동기로 작동하는것을 손쉽게 코드를 짤 수 있도록 도와준다.
+
+# 
