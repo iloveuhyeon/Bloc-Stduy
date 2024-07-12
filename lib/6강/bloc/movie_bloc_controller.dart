@@ -20,7 +20,8 @@ class MovieBlocController extends Bloc<MovieEvent, List<String>> {
 
   @override
   void onTransition(Transition<MovieEvent, List<String>> transition) {
-    // TODO: implement onTransition
+    super.onTransition(transition);
+    // ignore: avoid_print
     print(transition);
   }
 }

@@ -194,4 +194,17 @@ Ember_concurrency에서 영감을 받음.
 
 그래서 bloc_concurrency또한 비동기로 작동하는것을 손쉽게 코드를 짤 수 있도록 도와준다.
 
+    concurrent : bloc의 기본 처리 방식
+    sequential : 동기 방식 이벤트가 종료 되면 다음것 수행
+    restartable : 최근 이벤트만 수행 이전 이벤트는 제거
+    droppable : 이전 이벤트가 처리되는 동안 들어오는 이벤트 제거
+
+```dart
+  SampleBloc(this._sampleRepository) : super(const SampleState.init()) {
+    on<IUShowEvent>(_showIu, transformer: droppable());
+  }
+```
+
+이런식으로 활용하면 될거같다.
+
 # 

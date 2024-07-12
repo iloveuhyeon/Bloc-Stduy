@@ -3,6 +3,7 @@ import 'package:bloc_study/6%EA%B0%95/bloc/movie_bloc_controller.dart';
 import 'package:bloc_study/6%EA%B0%95/cubit/movie_cubit_controller.dart';
 import 'package:bloc_study/6%EA%B0%95/repository/movie_repository.dart';
 import 'package:bloc_study/7%EA%B0%95/src/app.dart';
+import 'package:bloc_study/8%EA%B0%95/src/app8.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -61,7 +62,7 @@ class MyApp extends StatelessWidget {
           create: (context) => MovieBlocController(
             MovieRepository(),
           ),
-          child: const App7(),
+          child: const App8(),
         ),
       ),
     );
