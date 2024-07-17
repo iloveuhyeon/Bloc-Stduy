@@ -47,6 +47,29 @@ void main() {
 //   }
 // }
 
+// 7강
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       theme: ThemeData(),
+//       home: RepositoryProvider(
+//         create: (context) {
+//           MovieRepository();
+//         },
+//         child: BlocProvider(
+//           create: (context) => MovieBlocController(
+//             MovieRepository(),
+//           ),
+//           child: const App7(),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -54,17 +77,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(),
-      home: RepositoryProvider(
-        create: (context) {
-          MovieRepository();
-        },
-        child: BlocProvider(
-          create: (context) => MovieBlocController(
-            MovieRepository(),
-          ),
-          child: const App8(),
-        ),
-      ),
+      home: const App8(),
     );
   }
 }

@@ -8,6 +8,8 @@ class UserInfoResultsModel extends Equatable {
     required this.userInfoList,
   });
 
+  UserInfoResultsModel.init() : this(currentPage: 0, userInfoList: []);
+
   factory UserInfoResultsModel.fromJson(Map<String, dynamic> json) {
     return UserInfoResultsModel(
       currentPage: (json['info']['page'] as int) + 1,
