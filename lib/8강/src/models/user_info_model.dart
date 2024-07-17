@@ -20,7 +20,7 @@ class UserInfoResultsModel extends Equatable {
   UserInfoResultsModel copyWithFromJson(Map<String, dynamic> json) {
     return UserInfoResultsModel(
       currentPage: (json['info']['page'] as int) + 1,
-      userInfoList: userInfoList
+      userInfoList: List<UserInfoModel>.from(userInfoList)
         ..addAll(json['results']
             .map<UserInfoModel>((item) => UserInfoModel.fromJson(item))
             .toList()),
