@@ -62,8 +62,8 @@ class LoadedUserListControllerCubitState extends UserListControllerCubitState {
 }
 
 class ErrorUserListControllerCubitState extends UserListControllerCubitState {
-  String errorMessage;
-  ErrorUserListControllerCubitState(
+  final String errorMessage;
+  const ErrorUserListControllerCubitState(
       {required this.errorMessage, required super.userInfoResultsModel});
 
   @override
