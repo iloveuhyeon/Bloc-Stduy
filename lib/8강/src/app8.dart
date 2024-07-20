@@ -45,15 +45,27 @@ class App8 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => BlocProvider(
-                          create: (context) => UserListControllerCubit(),
-                          child: const UserListCubit())),
+                    builder: (context) => BlocProvider(
+                      create: (context) => UserListControllerCubit(),
+                      child: const UserListCubit(),
+                    ),
+                  ),
                 );
               },
               child: const Text("Extends 상태관리"),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BlocProvider(
+                      create: (context) => UserListControllerCubit(),
+                      child: const UserListCubit(),
+                    ),
+                  ),
+                );
+              },
               child: const Text("bloc 상태관리"),
             )
           ],
