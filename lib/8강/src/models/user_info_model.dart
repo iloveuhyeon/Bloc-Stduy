@@ -8,7 +8,8 @@ class UserInfoResultsModel extends Equatable {
     required this.userInfoList,
   });
 
-  UserInfoResultsModel.init() : this(currentPage: 0, userInfoList: []);
+  const UserInfoResultsModel.init()
+      : this(currentPage: 0, userInfoList: const []);
 
   factory UserInfoResultsModel.fromJson(Map<String, dynamic> json) {
     return UserInfoResultsModel(
