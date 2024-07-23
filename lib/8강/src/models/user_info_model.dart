@@ -8,25 +8,19 @@ class UserInfoResultsModel extends Equatable {
     required this.userInfoList,
   });
 
-  const UserInfoResultsModel.init()
-      : this(currentPage: 0, userInfoList: const []);
+  const UserInfoResultsModel.init() : this(currentPage: 0, userInfoList: const []);
 
   factory UserInfoResultsModel.fromJson(Map<String, dynamic> json) {
     return UserInfoResultsModel(
       currentPage: (json['info']['page'] as int) + 1,
-      userInfoList: json['results']
-          .map<UserInfoModel>((item) => UserInfoModel.fromJson(item))
-          .toList(),
+      userInfoList: json['results'].map<UserInfoModel>((item) => UserInfoModel.fromJson(item)).toList(),
     );
   }
 
   UserInfoResultsModel copyWithFromJson(Map<String, dynamic> json) {
     return UserInfoResultsModel(
       currentPage: (json['info']['page'] as int) + 1,
-      userInfoList: List<UserInfoModel>.from(userInfoList)
-        ..addAll(json['results']
-            .map<UserInfoModel>((item) => UserInfoModel.fromJson(item))
-            .toList()),
+      userInfoList: List<UserInfoModel>.from(userInfoList)..addAll(json['results'].map<UserInfoModel>((item) => UserInfoModel.fromJson(item)).toList()),
     );
   }
 

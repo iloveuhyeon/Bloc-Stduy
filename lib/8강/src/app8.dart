@@ -1,6 +1,7 @@
 import 'package:bloc_study/8%EA%B0%95/src/controller/user_list_controller_cubit.dart';
 import 'package:bloc_study/8%EA%B0%95/src/controller/user_list_controller_cubit_copy_with.dart';
 import 'package:bloc_study/8%EA%B0%95/src/view/cubit/user_list.dart';
+import 'package:bloc_study/8%EA%B0%95/src/view/cubit_copywith/user_list.dart';
 import 'package:bloc_study/8%EA%B0%95/src/view/getx/user_list.dart';
 import 'package:bloc_study/8%EA%B0%95/src/controller/user_list_controller_getx.dart';
 import 'package:bloc_study/8%EA%B0%95/src/view/set_state/user_list.dart';
@@ -62,7 +63,7 @@ class App8 extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => BlocProvider(
                       create: (context) => UserListControllerCubitCopyWith(),
-                      child: const UserListCubit(),
+                      child: const UserListCubitCoptWith(),
                     ),
                   ),
                 );
