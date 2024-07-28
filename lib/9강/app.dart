@@ -1,3 +1,4 @@
+import 'package:bloc_study/9%EA%B0%95/components/buy_btn.dart';
 import 'package:bloc_study/9%EA%B0%95/components/lock_widget.dart';
 import 'package:bloc_study/9%EA%B0%95/components/products_widget.dart';
 import 'package:flutter/material.dart';
@@ -12,19 +13,25 @@ class App extends StatelessWidget {
         title: const Text('bloc to comunication'),
       ),
       body: const Column(
-        children: [],
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _DefaultItem(),
+          SizedBox(height: 50),
+          _PayItems(),
+        ],
       ),
-      // bottomNavigationBar: ,
+      bottomNavigationBar: BuyBtn(onTap: () {}),
     );
   }
 }
 
-class DefaultItem extends StatelessWidget {
-  const DefaultItem({super.key});
+class _DefaultItem extends StatelessWidget {
+  const _DefaultItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const Padding(
           padding: EdgeInsets.only(left: 20, top: 20),
@@ -51,6 +58,7 @@ class _PayItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Padding(
           padding: EdgeInsets.only(top: 20, left: 20),

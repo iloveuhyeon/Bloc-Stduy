@@ -11,8 +11,9 @@ class ProductsWidget extends StatelessWidget {
     return SizedBox(
       height: 100,
       child: ListView.separated(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => Container(
-          margin: const EdgeInsets.symmetric(horizontal: 5),
           width: 100,
           height: 80,
           color: Colors.grey.withOpacity(0.5),
@@ -21,7 +22,7 @@ class ProductsWidget extends StatelessWidget {
           ),
         ),
         separatorBuilder: (context, index) => const SizedBox(
-          width: 20,
+          width: 5,
         ),
         itemCount: item.length,
       ),

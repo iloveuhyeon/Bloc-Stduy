@@ -5,6 +5,7 @@ import 'package:bloc_study/6%EA%B0%95/repository/movie_repository.dart';
 import 'package:bloc_study/7%EA%B0%95/src/app.dart';
 import 'package:bloc_study/8%EA%B0%95/src/app8.dart';
 import 'package:bloc_study/9%EA%B0%95/app.dart';
+import 'package:bloc_study/9%EA%B0%95/repository/product_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -89,8 +90,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: App(),
+    return MaterialApp(
+      home: MultiRepositoryProvider(
+        providers: [
+          RepositoryProvider(
+            create: (context) => ProductRepository(),
+          ),
+          RepositoryProvider(
+            create: (context) => ProductRepository(),
+          )
+        ],
+        child: const App(),
+      ),
     );
   }
 }
