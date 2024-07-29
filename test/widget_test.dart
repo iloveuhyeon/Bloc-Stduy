@@ -16,15 +16,16 @@ void main() {
     await tester.pumpWidget(const MyApp());
 
     // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('기본 권한 아이템'), findsOneWidget);
+    expect(find.text('유료 권한 아이템'), findsOneWidget);
 
     // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    await tester.tap(find.text('라이선스 구매'));
     await tester.pump();
 
     // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // expect(find.text('0'), findsNothing);
+    expect(find.text('item [0]'), findsOneWidget);
+    expect(find.text('item [1]'), findsOneWidget);
   });
 }
